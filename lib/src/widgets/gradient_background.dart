@@ -11,6 +11,8 @@ class GradientBackground extends StatelessWidget {
     final isDark = theme.brightness == Brightness.dark;
 
     return Container(
+      width: double.infinity,
+      height: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
@@ -29,6 +31,7 @@ class GradientBackground extends StatelessWidget {
         ),
       ),
       child: Stack(
+        fit: StackFit.expand,
         children: [
           // Ambient globs (optional, for extra flair)
           Positioned(
